@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b35">
+  <title>Nexora — Workspace</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <section id="login" class="login-screen">
+    <div class="login-card">
+      <div class="brand brand-large"><span class="brand-mark">N</span><span>Nexora</span></div>
+      <p class="eyebrow">YOUR TEAM WORKSPACE</p>
+      <h1>Good work starts<br>with a clear view.</h1>
+      <p class="muted">Sign in to manage customers, projects and the work that moves them forward.</p>
+      <form id="login-form">
+        <label>Email address<input name="email" type="email" value="admin@nexora.local" required></label>
+        <label>Password<input name="password" type="password" value="NexoraDemo!2026" required></label>
+        <button class="primary full">Sign in to Nexora <span>→</span></button>
+        <p id="login-error" class="error"></p>
+      </form>
+      <div class="login-foot">Demo workspace · Local development</div>
+    </div>
+    <div class="login-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-card"><span class="eyebrow">WORKSPACE PULSE</span><strong>Everything<br>in motion.</strong><div class="art-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Customers · Projects · Progress</small></div></div>
+  </section>
+  <div id="app" class="shell hidden">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">N</span><span>Nexora</span></div>
+      <div class="workspace-switch"><span class="workspace-avatar">N</span><span><b>Nexora Studio</b><small>Workspace</small></span><span class="chevron">⌄</span></div>
+      <nav>
+        <p class="nav-label">WORKSPACE</p>
+        <a href="#" class="nav-link active" data-page="overview"><span>◫</span> Overview</a>
+        <a href="#" class="nav-link" data-page="customers"><span>◉</span> Customers <i id="customer-count">4</i></a>
+        <a href="#" class="nav-link" data-page="projects"><span>▦</span> Projects</a>
+        <a href="#" class="nav-link" data-page="tasks"><span>☷</span> Tasks</a>
+        <a href="#" class="nav-link" data-page="documents"><span>▤</span> Documents</a>
+        <p class="nav-label nav-spaced">INSIGHTS</p>
+        <a href="#" class="nav-link" data-page="reports"><span>⌁</span> Reports</a>
+        <a href="#" class="nav-link" data-page="activity"><span>◷</span> Activity</a>
+        <p class="nav-label nav-spaced">MANAGE</p>
+        <a href="#" class="nav-link" data-page="team"><span>♙</span> Team</a>
+        <a href="#" class="nav-link" data-page="settings"><span>⚙</span> Settings</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><span>✦</span><b>Need a hand?</b><small>Explore the workspace guide.</small></div><button id="logout" class="profile"><span class="avatar">ML</span><span><b id="user-name">Morgan Lee</b><small id="user-role">Administrator</small></span><span class="more">···</span></button></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="breadcrumb">Nexora <span>/</span> <b id="crumb">Overview</b></div><div class="top-actions"><button class="icon-btn" id="theme-toggle" title="Toggle theme">◐</button><button class="icon-btn notification" title="Notifications">♧<i></i></button><span class="top-divider"></span><span class="today" id="today"></span><span class="avatar">ML</span></div></header>
+      <div id="content" class="content"></div>
+    </main>
+    <div id="toast" class="toast"></div>
+  </div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

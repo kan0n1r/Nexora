@@ -1,0 +1,18 @@
+services:
+  nexora:
+    build: .
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      SESSION_SECRET: ${SESSION_SECRET:-replace-this-secret}
+      DATABASE_PATH: /app/data/nexora.sqlite
+      UPLOAD_DIR: /app/uploads
+    volumes:
+      - nexora-data:/app/data
+      - nexora-uploads:/app/uploads
+    restart: unless-stopped
+volumes:
+  nexora-data:
+  nexora-uploads:
