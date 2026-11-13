@@ -1,5 +1,13 @@
 # Nexora
 
+<p align="center">
+  <img src="src/public/logo.svg" alt="Nexora" width="224">
+</p>
+
+<p align="center">
+  A lightweight CRM workspace for customers, projects and team operations.
+</p>
+
 Nexora is a lightweight customer relationship management workspace for teams that need one place to manage customers, projects, tasks, documents and operational activity.
 
 ## Product areas
